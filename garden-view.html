@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST TASK (GARDEN)</title>
+    <link href="garden-view.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="helloWords">
+        <img class="helloWords__img" src="pngwing.com.png" alt="альтернативный текст" />
+        <div>
+            <h1>Здесь вы можете создать свой сад!</h1>
+            <h2> Каждые 30 суток на каждом дереве рождается новое яблоко</h2>
+            <h2>Оно съедобно только один день. Т.е. на 31 сутки яблоко становится испорченым.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <form class="container__form" name="treeInformation" onsubmit="return false">
+
+            <label>Имя:</label><br>
+            <input type="text" name="name" value="Милый огородик"><br>
+
+            <label>Возраст(в днях):</label><br>
+            <input type="number" name="age" value=0 min="0" max="100"><br>
+
+            <label>Количество деревьев:</label><br>
+            <input type="number" name="treesNum" value=0 min="0" max="100"><br>
+
+            <label>Изначальное количество яблок на каждом дереве:</label><br>
+            <input type="number" name="applesCountForEveryTree" value=0 min="0" max="100"><br>
+
+            <button type="button" id="createGarden">Создать сад</button>
+        </form>
+
+
+        <div class="container__gardenInfo" id="hidenBlock">
+            <button type="button" class="closeButton" id="closeAndDelGarden">X</button>
+
+            <strong>Имя:</strong>
+            <p id="ourGardenName"></p>
+            <strong>Возраст (в днях):</strong>
+            <p id="ourGardenAge"></p>
+            <strong>Количество деревьев:</strong>
+            <p id="ourGardenTreeCount"></p>
+            <strong>Количество яблок (общее):</strong>
+            <p id="ourGardenAllApplesCount"></p>
+            <strong>Количество съедобных яблок:</strong>
+            <p id="ourGardenisAbleToEatApplesCount"></p>
+            <strong>Количество уже испортившихся яблок:</strong>
+            <p id="ourGardenSpoiledApplesCount"></p>
+
+            <button type="button" id="addDay">Прошел день</button>
+            <button type="button" id="addTenDays">Прошло десять дней</button>
+            <button type="button" id="addThirtyDay">Прошло 30 дней</button>
+        </div>
+    </div>
+
+    <script type="module" src="./garden-page-view.js"></script>
+</body>
+
+</html>
